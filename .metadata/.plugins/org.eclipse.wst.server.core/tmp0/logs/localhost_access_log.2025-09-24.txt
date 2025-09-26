@@ -128,3 +128,6 @@
 127.0.0.1 - - [24/Sep/2025:12:57:21 +0900] "GET / HTTP/1.1" 404 808
 0:0:0:0:0:0:0:1 - - [24/Sep/2025:12:57:22 +0900] "GET /MustHaveJSP/01DirectiveScript/Error500.jsp HTTP/1.1" 500 178
 0:0:0:0:0:0:0:1 - - [24/Sep/2025:12:58:16 +0900] "GET /MustHaveJSP/01DirectiveScript/Heloo.jsp HTTP/1.1" 404 171
+127.0.0.1 - - [24/Sep/2025:14:00:06 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [24/Sep/2025:14:00:06 +0900] "GET /MustHaveJSP/02ImplicitObject/RequestMain.jsp HTTP/1.1" 200 1322
+0:0:0:0:0:0:0:1 - - [24/Sep/2025:14:00:18 +0900] "GET /MustHaveJSP/02ImplicitObject/RequestHeader.jsp HTTP/1.1" 200 1503
