@@ -1,0 +1,13 @@
+package utils;
+
+public class CookieManager {
+	
+	public class CookieManager {
+		public static void makeCookie(HttpServletResponse response, String cName, String cValue, int cTime) {
+			Cookie cookie = new Cookie(cName, cValue);
+		}
+	}
+	public static void main(String[] args) {
+		
+	}
+}	

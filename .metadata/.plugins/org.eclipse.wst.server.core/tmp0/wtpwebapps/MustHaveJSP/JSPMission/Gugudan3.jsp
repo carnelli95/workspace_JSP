@@ -14,18 +14,22 @@
 		int num = 2;
 		String dan = request.getParameter("dan");
 		String msg = "";
+		
 		if(dan != null) { 
-			num = Integer.parseInt(dan);
-			if(num < 2 || num > 9){ 
-				msg = "2단에서 9단까지만 출력가능합니다."; 
-				return; 
-			}	
-			else {
-				msg = "구구단 출력";
+		
+			try {
+				num = Integer.parseInt(dan);
+				if(num < 2 || num > 9){ 
+					msg = "2단에서 9단까지만 출력가능합니다."; 
+					num = 2;
+				}
+			}
+			catch(NumberFormatException e) {
+				msg ="숫자를 입력하세요";
 			}
 		}
 		
-		out.println(num + "단입니다.");
+		out.println(num + "단입니다.<br>");
 			for(int j = 1; j <= 9; j++) {
 				out.print(num + " x " + j  + " = " + num * j + "<br>");
 			}
