@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class DriverLoading {
@@ -49,8 +51,14 @@ public class DriverLoading {
     }
     
     private static void method05(Scanner sc, Statement st) throws Exception {
-        System.out.println("5번 기능은 아직 구현되지 않았습니다.");
+        System.out.println("");
     }
+    
+//    class CountryDTO {
+//    	String code;
+//    	String name;
+//    	int population;
+//    }
     
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -60,10 +68,20 @@ public class DriverLoading {
         int selectNum = -1;
         
         try {
+        	// Driver Loading
             Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/world";
+            // Get Connection
             con = DriverManager.getConnection(url, "musthave", "tiger");
+            // Create Statement
             st = con.createStatement();
+//            ResultSet rs2 = st.executeQuery("select code, name, population from country limit 10");
+//            
+//            List<CountryDTO> list = new ArrayList<>();
+//            while(rs.next()) {
+//            	CountryDTO dto = new CountryDTO();
+//            	dto.code = rs.getString(1);
+//            }
             
             while (selectNum != 0) {
                 System.out.print("질의 번호를 선택하시오: ");
