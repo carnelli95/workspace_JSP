@@ -103,7 +103,6 @@ public class QueryPreparedStatement {
 				String url = "jdbc:mysql://localhost:3306/world";
 				con = DriverManager.getConnection(url, "musthave", "tiger");
 				
-				
 				while(selectNum != 0) {
 					System.out.println("질의 번호를 선택하시오 : ");
 					selectNum = sc.nextInt();
